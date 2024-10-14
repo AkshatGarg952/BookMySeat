@@ -1,0 +1,102 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  margin: 0;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.movie-selection {
+  margin-bottom: 20px;
+}
+
+.movie-selection label {
+  font-weight: bold;
+}
+
+.seat-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.seat {
+  font-size: 30px; /* Adjust the icon size */
+  color: #8bc34a; /* Default color for available seats */
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center; /* Center the icon */
+}
+
+.seat:hover {
+  transform: scale(1.2);
+}
+
+.seat.occupied {
+  color: #f44336; /* Color for occupied seats */
+  pointer-events: none; /* Disable click on occupied seats */
+}
+
+.seat.selected {
+  color: #ffd54f; /* Color for selected seats */
+}
+
+.selectedSeat {
+  background-color: #8bc34a;
+  padding: 5px;
+  margin: 2px 0;
+}
+
+.summary {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button#cancelBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+button#proceedBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.noSelected {
+  color: red;
+}
