@@ -36,11 +36,11 @@ h1, h2, h3 {
 }
 
 .seat {
-  font-size: 30px; /* Adjust the icon size */
-  color: #8bc34a; /* Default color for available seats */
+  font-size: 30px; 
+  color: #8bc34a;
   cursor: pointer;
   transition: transform 0.3s;
-  text-align: center; /* Center the icon */
+  text-align: center; 
 }
 
 .seat:hover {
@@ -48,12 +48,12 @@ h1, h2, h3 {
 }
 
 .seat.occupied {
-  color: #f44336; /* Color for occupied seats */
-  pointer-events: none; /* Disable click on occupied seats */
+  color: #f44336; 
+  pointer-events: none; 
 }
 
 .seat.selected {
-  color: #ffd54f; /* Color for selected seats */
+  color: #ffd54f;
 }
 
 .selectedSeat {
