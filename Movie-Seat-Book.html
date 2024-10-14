@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <link rel="stylesheet" href="Movie-Seat-Book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Seat Booking System</h1>
+        
+        <div class="movie-selection">
+            <label for="selectMovie">Select a Movie:</label>
+            <select id="selectMovie"></select>
+            <div>
+                <h2 id="movieName"></h2>
+                <h3 id="moviePrice"></h3>
+            </div>
+        </div>
+
+        <div id="seatCont" class="seat-container">
+            <!-- Dynamic seat generation will happen here -->
+        </div>
+
+        <div class="summary">
+            <h2>Selected Seats:</h2>
+            <div id="selectedSeatsHolder">
+                <span class="noSelected">No Seat Selected</span>
+            </div>
+            <p>Total Seats: <span id="numberOfSeat">0</span></p>
+            <p>Total Price: <span id="totalPrice">$0</span></p>
+        </div>
+
+        <div class="actions">
+            <button id="cancelBtn"><i class="fas fa-times"></i> Cancel Selection</button>
+            <button id="proceedBtn"><i class="fas fa-check"></i> Proceed to Book</button>
+        </div>
+    </div>
+    
+    <script src="Movie-Seat-Book.js"></script>
+</body>
+</html>
