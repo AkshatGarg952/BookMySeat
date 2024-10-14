@@ -31,7 +31,7 @@ function updateSelectedSeatsHolder() {
     });
 }
 
-// Populate movie selection dropdown
+
 let selectMovieID = document.querySelector('#selectMovie');
 
 moviesList.forEach((movie, index) => {
@@ -39,7 +39,7 @@ moviesList.forEach((movie, index) => {
     option.textContent = `${movie.movieName} $${movie.price}`;
     selectMovieID.appendChild(option);
     
-    // Generate seats for the first movie by default
+    
     if (index === 0) {
         generateSeats(movie.seats);
         document.querySelector("#movieName").textContent = movie.movieName;
@@ -48,15 +48,15 @@ moviesList.forEach((movie, index) => {
     }
 });
 
-// Generate seats based on the selected movie
+
 function generateSeats(numSeats) {
     const seatCont = document.getElementById('seatCont');
-    seatCont.innerHTML = ''; // Clear previous seats
+    seatCont.innerHTML = '';
     for (let i = 1; i <= numSeats; i++) {
         const seat = document.createElement('div');
         seat.classList.add('seat');
         seat.setAttribute("data-seatId", i);
-        seat.innerHTML = `<i class="fas fa-chair"></i>`; // Add Font Awesome icon for the seat
+        seat.innerHTML = `<i class="fas fa-chair"></i>`; 
         seat.addEventListener('click', () => {
             if (!seat.classList.contains('occupied')) {
                 seat.classList.toggle('selected');
@@ -74,11 +74,11 @@ selectMovieID.addEventListener("input", (event) => {
     document.querySelector("#movieName").textContent = selectedMovie.movieName;
     document.querySelector("#moviePrice").textContent = `$${selectedMovie.price}`;
     moviePrice = selectedMovie.price;
-    generateSeats(selectedMovie.seats); // Generate seats for the selected movie
-    countTotalPrice(); // Update price count after changing movie
+    generateSeats(selectedMovie.seats); 
+    countTotalPrice(); 
 });
 
-// Cancel button functionality
+
 document.querySelector('#cancelBtn').addEventListener('click', () => {
     let selectedSeats = document.querySelectorAll('#seatCont .selected');
     selectedSeats.forEach(seat => {
@@ -88,7 +88,7 @@ document.querySelector('#cancelBtn').addEventListener('click', () => {
     removeSelectedSeatsHolder();
 });
 
-// Proceed button functionality
+
 document.querySelector('#proceedBtn').addEventListener('click', () => {
     if (!totalSelectedSeat) {
         alert("Oops no seat Selected");
@@ -99,7 +99,7 @@ document.querySelector('#proceedBtn').addEventListener('click', () => {
     let selectedSeats = document.querySelectorAll('#seatCont .selected');
     selectedSeats.forEach(seat => {
         seat.classList.replace("selected", "occupied");
-        seat.innerHTML = `<i class="fas fa-times"></i>`; // Change the icon for occupied seats
+        seat.innerHTML = `<i class="fas fa-times"></i>`; 
     });
 
     countTotalPrice();
