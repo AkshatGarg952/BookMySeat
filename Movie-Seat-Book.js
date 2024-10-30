@@ -1,7 +1,8 @@
 const moviesList = [
-    { movieName: "Flash", price: 7, seats: 20 },
-    { movieName: "Spiderman", price: 5, seats: 25 },
+    { movieName: "Flash", price: 7, seats: 30 },
+    { movieName: "Spiderman", price: 5, seats: 30 },
     { movieName: "Batman", price: 4, seats: 30 },
+    { movieName: "Avatar", price: 8, seats: 30 },
 ];
 
 let totalSelectedSeat = 0;
